@@ -1,6 +1,5 @@
+# config/routes.rb
 Rails.application.routes.draw do
-  namespace :api do
-    get 'greetings/random', to: 'greetings#random_greeting'
-  end
+  root 'static_pages#home'
+  get '/api/random_greeting', to: 'greetings#random_greeting'
 end
-
